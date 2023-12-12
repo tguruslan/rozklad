@@ -75,11 +75,11 @@
                     <div class="card-body">
                         <p class="text-muted">{{ lesson.works_type }}</p>
                         <i class="icon icon-people"></i> {{ lesson.groups }}<br>
-                        <i *ngIf="lesson.hasOwnProperty(subgroups)" class="icon icon-people"></i> {{ lesson.subgroups }}<br *ngIf="lesson.hasOwnProperty(subgroups)">
+                        <i *ngIf="lesson[subgroups]" class="icon icon-people"></i> {{ lesson.subgroups }}<br *ngIf="lesson[subgroups]">
                         <i class="icon icon-check"></i> {{ lesson.form_control }}<br>
                         <i class="icon icon-menu"></i> {{ lesson.teacher }}<br>
-                        <a *ngIf="lesson.hasOwnProperty(url)" href="{{ lesson.url }}" target="_blank"><i class="icon icon-link"></i> Посилання</a><br>
-                        <p *ngIf="lesson.hasOwnProperty(comment)">{{ lesson.comment }}</p>
+                        <a *ngIf="lesson[url]" href="{{ lesson.url }}" target="_blank"><i class="icon icon-link"></i> Посилання</a><br>
+                        <p *ngIf="lesson[comment]">{{ lesson.comment }}</p>
                     </div>
                 </div>
             </div>
