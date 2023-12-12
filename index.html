@@ -69,17 +69,17 @@
                 <div class="card" ng-repeat="(id, lesson) in data">
                     <div class="card-header">
                         <div class="card-title h5">{{ lesson.subject }}</div>
-                        <div class="card-subtitle text-gray"><b>{{ number }} пара</b> <i class="icon icon-check"></i> {{ lesson.time }}</div>
+                        <div class="card-subtitle text-gray"><b>{{ number }} пара</b> ({{ lesson.time }})</div>
                     </div>
 
                     <div class="card-body">
                         <p class="text-muted">{{ lesson.works_type }}</p>
                         <i class="icon icon-people"></i> {{ lesson.groups }}<br>
-                        <i [hidden]="!lesson.subgroups" class="icon icon-people"></i> {{ lesson.subgroups }}<br [hidden]="!lesson.subgroups">
+                        <i [ngIf]="lesson.subgroups" class="icon icon-people"></i> {{ lesson.subgroups }}<br [ngIf]="lesson.subgroups">
                         <i class="icon icon-check"></i> {{ lesson.form_control }}<br>
                         <i class="icon icon-menu"></i> {{ lesson.teacher }}<br>
-                        <a [hidden]="!lesson.url" href="{{ lesson.url }}" target="_blank"><i class="icon icon-link"></i> Посилання</a><br>
-                        <p [hidden]="!lesson.comment">{{ lesson.comment }}</p>
+                        <a [ngIf]="lesson.url" href="{{ lesson.url }}" target="_blank"><i class="icon icon-link"></i> Посилання</a><br>
+                        <p [ngIf]="lesson.comment">{{ lesson.comment }}</p>
                     </div>
                 </div>
             </div>
