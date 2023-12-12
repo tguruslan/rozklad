@@ -20,38 +20,38 @@
 
 <div class="container grid-lg" ng-app="Timetable" ng-controller="FilterController">
     <div class="columns">
-        <div class="column col-4">
-            <label>Структурний підрозділ</label>
+        <div class="column col-4 form-group">
+            <label class="form-label">Структурний підрозділ</label>
             <select class="faculty_id" style="width: 100%;">
                 <option ng-repeat="item in faculty_idItems" value="{{ item.id }}">{{ item.text }}</option>
             </select>
         </div>
-        <div class="column col-4">
-            <label>Освітній ступінь</label>
+        <div class="column col-4 form-group">
+            <label class="form-label">Освітній ступінь</label>
             <select class="okr" style="width: 100%;">
                 <option ng-repeat="item in okrItems" value="{{ item.id }}">{{ item.text }}</option>
             </select>
         </div>
-        <div class="column col-4">
-            <label>Розклад/Спеціальність</label>
+        <div class="column col-4 form-group">
+            <label class="form-label">Розклад/Спеціальність</label>
             <select class="speciality" style="width: 100%;">
                 <option ng-repeat="item in specialityItems" value="{{ item.id }}">{{ item.text }}</option>
             </select>
         </div>
-        <div class="column col-4">
-            <label>Форма навчання</label>
+        <div class="column col-4 form-group">
+            <label class="form-label">Форма навчання</label>
             <select class="education_form_id" style="width: 100%;">
                 <option ng-repeat="item in education_form_idItems" value="{{ item.id }}">{{ item.text }}</option>
             </select>
         </div>
-        <div class="column col-4">
-            <label>Курс</label>
+        <div class="column col-4 form-group">
+            <label class="form-label">Курс</label>
             <select class="course" style="width: 100%;">
                 <option ng-repeat="item in courseItems" value="{{ item.id }}">{{ item.text }}</option>
             </select>
         </div>
-        <div class="column col-4">
-            <label>Група</label>
+        <div class="column col-4 form-group">
+            <label class="form-label">Група</label>
             <select class="group" style="width: 100%;">
                 <option ng-repeat="item in groupItems" value="{{ item.id }}">{{ item.text }}</option>
             </select>
